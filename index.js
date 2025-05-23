@@ -1,15 +1,17 @@
-import express from 'express';
-import bodyParser from 'body-parser';
+import express from "express";
+import bodyParser from "body-parser";
+import ussdRouter from "./routes/ussd.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware to parse JSON
 app.use(bodyParser.json());
+app.use(ussdRouter);
 
 // A test route
-app.get('/', (req, res) => {
-  res.send('Hello from JUVO backend!');
+app.get("/", (req, res) => {
+  res.send("Hello from JUVO backend!");
 });
 
 // Start the server
