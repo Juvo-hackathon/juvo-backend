@@ -1,0 +1,152 @@
+{
+  "headache": {
+    "translations": {
+      "en": "Headache",
+      "twi": "Tipaeɛ",
+      "fante": "Tipae",
+      "ewe": "Taɖuame",
+      "dagbani": "Zuɣuyaali taligu"
+    },
+    "feedback": {
+      "twi": "Nom nsuo na da.",
+      "fante": "Nom nsuo na dɔkita ho hia wo sɛ ɛyɛ duru.",
+      "ewe": "Nom nsuo eye va do go le dzidzɔm.",
+      "dagbani": "Yoli pam ka yaafa."
+    }
+  },
+
+  "swollen_feet": {
+    "translations": {
+      "twi": "Nan a ahonhon",
+      "fante": "Nan ahon",
+      "ewe": "Afɔwo vuvu",
+      "dagbani": "Naba piɛmbu"
+    },
+    "feedback": {
+      "twi": "Ma wo nan so",
+      "fante": "Ma wo nan do",
+      "ewe": "Do wò afɔwo ɖe dzi",
+      "dagbani": "Duhimi a naba"
+    }
+  },
+
+  "nosebleed": {
+    "translations": {
+      "twi": "Mogya a ɛretu wɔ hwene mu",
+      "fante": "Hwene mogya",
+      "ewe": "Ʋu ƒe ŋɔti",
+      "dagbani": "Nyee ni ʒiɛm"
+    },
+    "feedback": {
+      "twi": "Mia hwene mmienu no nyinaa mu.",
+      "fante": "Hwɛ w'ani ho yie na mia hwene no.",
+      "ewe": "Lé ŋɔti eveawo siaa ɖe asi.",
+      "dagbani": "Feesim niŋ nyɛvili zaa yomyom."
+    }
+  },
+
+  "difficulty_breathing": {
+    "translations": {
+      "twi": "Ɔhome mu den",
+      "fante": "Mframa mu den",
+      "ewe": "Nukpɔkpɔ kple dɔwɔ",
+      "dagbani": "Bɔɣli bihiri"
+    },
+    "feedback": {
+      "twi": "Fa ahome tenten na bɔ mpae.",
+      "fante": "Tumi home dzen dzen.",
+      "ewe": "Gbɔgbɔ deto, susɔ atikewɔwɔ.",
+      "dagbani": "Vuhim titali, bɔm tim"
+    }
+  },
+
+  "tight_chest": {
+    "translations": {
+      "twi": "Koko mu yɛ den",
+      "fante": "Akoma mu yɛ dzen",
+      "ewe": "Akɔta sesẽ ɖe edzi",
+      "dagbani": "Nyɔɣu bahiri kirikiri"
+    },
+    "feedback": {
+      "twi": "Ahome a emu dɔ a wɔhome.",
+      "fante": "Hwehwɛ ayaresa.",
+      "ewe": "Gbɔgbɔ deto, di atikewɔwɔ ƒe susu.",
+      "dagbani": "Vuhim titali, bɔm tim"
+    }
+  },
+
+  "eye_pain": {
+    "translations": {
+      "twi": "Ani akyi yɛ den",
+      "fante": "Ekyir yaw",
+      "ewe": "Vevesese le ŋku megbe",
+      "dagbani": "Piŋmɔ yɛ hiŋmɛii lɛ asɛɛ"
+    },
+    "feedback": {
+      "twi": "Abasa anaa awɔw a wɔde hyɛ mu.",
+      "fante": "Hyɛ w'ani ho ban.",
+      "ewe": "Alɔnu alo nutete fafɛwo zazã.",
+      "dagbani": "Nuu malibu bee wari."
+    }
+  },
+
+  "swollen_gums": {
+    "translations": {
+      "twi": "Ntini a ahonhon",
+      "fante": "Ɛse a ahon",
+      "ewe": "Aɖu siwo vuvu",
+      "dagbani": "Binfalafala m-pɔripɔripɔri"
+    },
+    "feedback": {
+      "twi": "Nkyene nsuo hohoro w'ano.",
+      "fante": "Keka nkyene nsuo hohoro w'ano.",
+      "ewe": "Saltwater Rinse ƒe ŋkɔ",
+      "dagbani": "Kɔ’surim n-nyɛ yɛlim"
+    }
+  },
+
+  "stomach_pain": {
+    "translations": {
+      "twi": "Yafunu mu yɛ den",
+      "fante": "Yafunu mu bɔbɔ",
+      "ewe": "Dɔgbo ƒe vevesese",
+      "dagbani": "Puli ni biɛrim"
+    },
+    "feedback": {
+      "twi": "We akakaduro anaa nom nsuo.",
+      "fante": "Nom nsuo.",
+      "ewe": "ɖu ginger/ nono tsi",
+      "dagbani": "Ŋubiti naanzua / nyu kom"
+    }
+  },
+
+  "general": {
+    "welcome": {
+      "en": "Welcome to JUVO",
+      "twi": "Yɛma wo akwaaba ba JUVO",
+      "fante": "Pumpɔŋɔ JUVO",
+      "ewe": "Xɔe ɖe JUVO dzi",
+      "dagbani": "Yɛri zaŋ JUVO"
+    },
+    "select_language": {
+      "en": "Select your language",
+      "twi": "Paw wo kasa",
+      "fante": "Paw kasa a wopɛ",
+      "ewe": "Tia wò gbegbɔgblɔ",
+      "dagbani": "Piimi a zilima"
+    },
+    "enter_symptom": {
+      "en": "Enter your symptoms",
+      "twi": "Hyɛ wo sɛnkyerɛnne ahorow no mu",
+      "fante": "Hyɛ wo yareɛ nsɛm no",
+      "ewe": "Ge ɖe wò dzesiwo me",
+      "dagbani": "Niŋm’ a bɔha ni"
+    },
+    "press_1_for": {
+      "twi": "Mia 1 so ma",
+      "fante": "Paw 1 ma",
+      "ewe": "Nyadzɔdzɔgbalẽ 1 na",
+      "dagbani": "Nyin’ zaŋmiya ʒiɛm’ gol’ naŋgbanyee"
+    }
+  }
+}
