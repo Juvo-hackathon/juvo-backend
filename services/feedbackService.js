@@ -24,4 +24,6 @@ export const getFeedback = (symptom, lang) => {
     console.error("Error loading feedback:", error.message);
     return "Something went wrong. Please try again later.";
   }
+  
 };
+// export { symptomsData };

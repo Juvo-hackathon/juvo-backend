@@ -37,14 +37,14 @@
     "translations": {
       "en": "Nosebleed",
       "twi": "Mogya a ɛretu wɔ hwene mu",
-      "fante": "Hwene mogya",
+      "fante": "Hwene p)ne",
       "ewe": "Ʋu ƒe ŋɔti",
       "dagbani": "Nyee ni ʒiɛm"
     },
     "feedback": {
-      "en":"Pinch your nose",
+      "en": "Pinch your nose",
       "twi": "Mia hwene mmienu no nyinaa mu.",
-      "fante": "Hwɛ w'ani ho yie na mia hwene no.",
+      "fante": "mia hwene no.",
       "ewe": "Lé ŋɔti eveawo siaa ɖe asi.",
       "dagbani": "Feesim niŋ nyɛvili zaa yomyom."
     }
