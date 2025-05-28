@@ -16,7 +16,46 @@ export const handleUssd = (req, res) => {
       5: "dagbani",
     };
 
-    // Symptom keys (these are keys used to get feedback)
+    // User-facing messages in each language
+    const messages = {
+      welcome: {
+        en: "Welcome to JUVO",
+        twi: "Akwaaba ba JUVO",
+        fante: "Akwaaba  JUVO",
+        ewe: "Woezɔ JUVO me",
+        dagbani: "Nawuni ni ti JUVO",
+      },
+      chooseSymptom: {
+        en: "Choose a symptom:",
+        twi: "Fa wo sɛnkyerɛnne ahorow no:",
+        fante: "faw yareɛ bi:",
+        ewe: "Ge ɖe wò dzesiwo me:",
+        dagbani: "Niŋm’ a bɔha ni:",
+      },
+      invalidLang: {
+        en: "Invalid language selection.",
+        twi: "Kasa a wɔapaw no nyɛ nokware.",
+        fante: "Kasa a wɔapaw no nyɛ nokware.",
+        ewe: "Nyenyeŋu meɖe gbe si wòna.",
+        dagbani: "Ka pabli la gbɛ noli.",
+      },
+      invalidSymptom: {
+        en: "Invalid selection. Please dial again.",
+        twi: "Fa nyɛ nokware. Mesrɛ san frɛ bio.",
+        fante: "Fa no nyɛ nokware. Mesrɛ san frɛ bio.",
+        ewe: "Nyenyeŋu meɖe. Meseŋu gbɔ le esia me.",
+        dagbani: "Ka pabli la noli. Tuma zaa, yoli kaŋa ni.",
+      },
+      invalidInput: {
+        en: "Invalid input. Please follow the instructions.",
+        twi: "Wode biribi a ɛnyɛ nokware de baa ha. Mesrɛ di akyire nsɛm no.",
+        fante: "Wode biribi a ɛnyɛ nokware de baa ha. Mesrɛ di nsɛm no akyi.",
+        ewe: "Nyenyeŋu meɖe wò tsɔe. Meseŋu le edzi me.",
+        dagbani: "Pabli gɔvbu. Laafi ni, yoli kaŋa ni noli yɛrima.",
+      },
+    };
+
+    // Symptom keys (used in service)
     const symptomOptions = {
       1: "headache",
       2: "swollen_feet",
@@ -25,7 +64,7 @@ export const handleUssd = (req, res) => {
       5: "stomach_pain",
     };
 
-    // Symptom labels for display in different languages
+    // Symptom labels in different languages
     const symptomLabels = {
       1: {
         en: "Headache",
@@ -65,34 +104,37 @@ export const handleUssd = (req, res) => {
     };
 
     if (text === "") {
-      // Initial menu: language selection
+      // Step 1: Language selection menu (static in English)
       response = `CON Welcome to JUVO\n1. English\n2. Twi\n3. Fante\n4. Ewe\n5. Dagbani`;
     } else if (levels.length === 1) {
-      // After language selected, show symptom options in chosen language
-      const langKey = langOptions[levels[0]]; // Get language key e.g., "en"
+      // Step 2: Show symptom list in selected language
+      const langKey = langOptions[levels[0]];
       if (!langKey) {
-        response = "END Invalid language selection.";
+        response = `END ${messages.invalidLang["en"]}`;
       } else {
-        response = "CON Choose a symptom:\n";
+        response = `CON ${messages.chooseSymptom[langKey]}\n`;
         for (const [key, labels] of Object.entries(symptomLabels)) {
-          // Use symptom label for selected language
           response += `${key}. ${labels[langKey]}\n`;
         }
         response = response.trim();
       }
     } else if (levels.length === 2) {
-      // After symptom selected, provide feedback
+      // Step 3: Display feedback
       const langKey = langOptions[levels[0]];
       const symptomKey = symptomOptions[levels[1]];
 
       if (!langKey || !symptomKey) {
-        response = "END Invalid selection. Please dial again.";
+        response = `END ${
+          messages.invalidSymptom[langKey] || messages.invalidSymptom["en"]
+        }`;
       } else {
         const feedback = getFeedback(symptomKey, langKey);
         response = `END ${feedback}`;
       }
     } else {
-      response = "END Invalid input. Please follow the instructions.";
+      // Invalid navigation depth
+      const langKey = langOptions[levels[0]] || "en";
+      response = `END ${messages.invalidInput[langKey]}`;
     }
 
     res.set("Content-Type", "text/plain");
