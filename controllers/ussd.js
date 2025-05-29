@@ -105,7 +105,7 @@ export const handleUssd = (req, res) => {
 
     if (text === "") {
       // Step 1: Language selection menu (static in English)
-      response = `CON Welcome to JUVO\n1. English\n2. Twi\n3. Fante\n4. Ewe\n5. Dagbani`;
+      response = `CON Welcome to JUVO, Akwaaba, Woezɔ, Nawuni\n1. English\n2. Twi\n3. Fante\n4. Ewe\n5. Dagbani`;
     } else if (levels.length === 1) {
       // Step 2: Show symptom list in selected language
       const langKey = langOptions[levels[0]];

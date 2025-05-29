@@ -30,7 +30,7 @@ JUVO is a health support system that helps users get basic health advice through
 
 ---
 
-##  Getting Started
+## Getting Started
 
 ### 1. **Install Dependencies**
 
@@ -81,4 +81,11 @@ feedbackService.js pulls symptom feedback from a local .json file.
 USSD and voice flows are handled separately but share the same logic and data.
 
 Sessions are tracked to guide the user step-by-step.
+
+
+## 🎥 Demo Video
+
+Watch a demo of JUVO in action:
+
+[▶️ Click here to watch the demo video] (https://drive.google.com/file/d/1Wm6lVxuPGbC38zQy-t_l74fKz5VFMjE3/view?usp=sharing)
 
