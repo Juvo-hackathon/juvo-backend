@@ -3,12 +3,14 @@ import bodyParser from "body-parser";
 import ussdRouter from "./routes/ussd.js";
 import voiceRouter from "./routes/voice.js";
 import { getFeedback } from "./services/feedbackService.js";
+import cors from "cors";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware to parse JSON
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 app.use(ussdRouter);
 app.use(voiceRouter);
 
